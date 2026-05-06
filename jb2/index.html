@@ -63,7 +63,8 @@
             magenta: '#ff00ff',
             lime: '#39ff14',
             pink: '#ff6ac1',
-            bg: '#050505'
+            bg: '#050505',
+            font: "'Courier New', Courier, monospace"
         };
 
         let width, height;
@@ -428,7 +429,7 @@
                 ctx.fillRect(0, 0, width, height);
                 
                 ctx.shadowBlur = 20;
-                ctx.font = 'bold 64px Courier New';
+                ctx.font = 'bold 64px ' + COLORS.font;
                 ctx.textAlign = 'center';
 
                 if (state.gameOver) {
@@ -443,7 +444,7 @@
 
                 ctx.shadowBlur = 0;
                 ctx.fillStyle = 'white';
-                ctx.font = '24px Courier New';
+                ctx.font = '24px ' + COLORS.font;
                 ctx.fillText('FINAL SCORE: ' + state.score, width / 2, height / 2 + 60);
                 ctx.fillText('PRESS SPACE OR CLICK TO RESTART', width / 2, height / 2 + 100);
             }
