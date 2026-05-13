@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEON CALCULATOR</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="calculator-container">
+        <div class="calculator-header">
+            <h1>NEON CALC</h1>
+            <button id="toggle-history" title="Toggle History">📜</button>
+        </div>
+        
+        <div class="display-container">
+            <div id="previous-operand" class="previous-operand"></div>
+            <div id="current-operand" class="current-operand">0</div>
+        </div>
+
+        <div class="button-grid">
+            <!-- Scientific Row 1 -->
+            <button class="btn scientific" data-function="sin">sin</button>
+            <button class="btn scientific" data-function="cos">cos</button>
+            <button class="btn scientific" data-function="tan">tan</button>
+            <button class="btn scientific" data-function="log">log</button>
+            <button class="btn scientific" data-function="ln">ln</button>
+
+            <!-- Scientific Row 2 -->
+            <button class="btn scientific" data-function="sqrt">√</button>
+            <button class="btn scientific" data-function="pow">xⁿ</button>
+            <button class="btn scientific" data-constant="PI">π</button>
+            <button class="btn scientific" data-constant="E">e</button>
+            <button class="btn utility" data-action="all-clear">AC</button>
+
+            <!-- Basic Row 1 -->
+            <button class="btn number" data-number="7">7</button>
+            <button class="btn number" data-number="8">8</button>
+            <button class="btn number" data-number="9">9</button>
+            <button class="btn operator" data-operator="/">÷</button>
+            <button class="btn utility" data-action="delete">DEL</button>
+
+            <!-- Basic Row 2 -->
+            <button class="btn number" data-number="4">4</button>
+            <button class="btn number" data-number="5">5</button>
+            <button class="btn number" data-number="6">6</button>
+            <button class="btn operator" data-operator="*">×</button>
+            <button class="btn scientific" data-function="abs">|x|</button>
+
+            <!-- Basic Row 3 -->
+            <button class="btn number" data-number="1">1</button>
+            <button class="btn number" data-number="2">2</button>
+            <button class="btn number" data-number="3">3</button>
+            <button class="btn operator" data-operator="-">-</button>
+            <button class="btn scientific" data-function="exp">exp</button>
+
+            <!-- Basic Row 4 -->
+            <button class="btn number" data-number="0">0</button>
+            <button class="btn number" data-number=".">.</button>
+            <button class="btn operator" data-operator="=">=</button>
+            <button class="btn operator" data-operator="+">+</button>
+            <button class="btn scientific" data-function="fact">n!</button>
+        </div>
+
+        <div id="history-panel" class="history-panel hidden">
+            <div class="history-header">
+                <h2>HISTORY</h2>
+                <button id="clear-history">Clear</button>
+            </div>
+            <ul id="history-list"></ul>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
